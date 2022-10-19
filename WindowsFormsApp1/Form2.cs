@@ -19,6 +19,10 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+            WMP.URL = @"E:\ЗАГРУЗКИ\GigaLivesey-master\GigaLivesey-master\WindowsFormsApp1\Resources\Secunda.mp3";
+            WMP.controls.play();
+            //WMP.controls.stop();
+            //WMP.close();
         }
         //awaid this
         public Form2(Form1 f, GigaForm3 gigaForm3)
@@ -37,12 +41,7 @@ namespace WindowsFormsApp1
         private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
 
-            if (e.newState == 8)
-            {
-                this.axWindowsMediaPlayer1.close();
-                this.Controls.Remove(axWindowsMediaPlayer1);
 
-            }
 
         }
 
@@ -77,6 +76,11 @@ namespace WindowsFormsApp1
             Settings settings = new Settings();
             settings.Show();
             this.Hide();
+
+            WMP.URL = @"E:\ЗАГРУЗКИ\GigaLivesey-master\GigaLivesey-master\WindowsFormsApp1\Resources\Secunda.mp3";
+            //WMP.controls.play();
+            WMP.controls.stop();
+            //WMP.close();  
         }
         public WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
 

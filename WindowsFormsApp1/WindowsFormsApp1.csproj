@@ -230,5 +230,8 @@
   <ItemGroup>
     <None Include="Resources\DrFace.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ms908aslnmr91.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
